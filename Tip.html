@@ -2,11 +2,11 @@
 <html>
 <head>
 	<title>Front End Restaurant Tip Calulator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 
 	<style>
 		.form-control{width: 50%;display: inline-flex;}
@@ -40,13 +40,13 @@
 <h3>Tip Calculator</h3>
  <form role="form" class="tip-form">
   <div class="form-group">
-    <input type="text" class="form-control" id="fullname" placeholder="Enter FullName" required="required">
+    <input type="text" class="form-control" id="fullname" placeholder="Enter FullName">
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" id="bill" placeholder="Enter Bill Amount" required="required">
+    <input type="text" class="form-control" id="bill" placeholder="Enter Bill Amount">
   </div>
   <div class="form-group">
-  <select class="form-control" type="select" name="waitress" required="required">
+  <select class="form-control" type="select"  id="waitress">
 						<option value="">---Select Waiter/Waitress---</option>
 						<option value="Micheal">Micheal</option>    
 						<option value="Jane">Jane</option>  
@@ -55,7 +55,7 @@
 					</select>
 	</div>
 	 <div class="form-group">
-  <select class="form-control" type="select" name="tipamount" required="required">
+  <select class="form-control" type="select" id="tipamount">
 						<option value="">---Select Tip Amount---</option>
 						<option value="0.1">10%</option>    
 						<option value="0.25">25%</option>  
@@ -63,9 +63,9 @@
 						<option value="0.4">40%</option>
 					</select>
 	</div>
-  <button type="submit" class="btn btn-primary">CALCULATE</button>
+  <input type="submit" class="btn btn-primary" value="calculate" onclick="calculate()"/>
+  <script src="tip.js"></script> 
 </form>
-
 </body>
 
 </html>
